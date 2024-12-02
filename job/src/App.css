@@ -1,38 +1,100 @@
-.App {
-  text-align: center;
+
+.pagetop{
+	background-color: white;
+	background-size: contain;
+  background-repeat: no-repeat;
+	background-position: center center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.pagetop img{
+	 width: 1000px;
+   max-width:100%;
+   height:auto;
+   position: relative;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.newjobpost {
+  border-radius: 15px;
+	background-color: var(--backgroundcolor);
+	width: 600px;
+	height: 140px;
+	color: black;
+	margin-top: 30px;
+	float: left;
+	margin-bottom: 50px;
+}
+.newjobpost > .inner {
+	width: calc(100% - 20px);
+	margin: 10px;
+	height: calc(100% - 20px);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.newjobpost > .inner > .h1 {
+  position: absolute;
+	top: 0px;
+	left: 5px;
+	font-size: 20px;
+/*	font-weight: bold;*/
+	line-height: 40px;
+	vertical-align: top;
+	height: 40px;
 }
 
-.App-link {
-  color: #61dafb;
+.newjobpost > .inner > .h2 {
+  font-size: 15px;
+	line-height: 14px;
+	height: 45px;
+	width: 100%;
+	position: absolute;
+	top: 35px;
+	left: 5px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.newjobpost > .inner > .button{
+  background-color: yellowgreen;
+  position: absolute;
+	right: 5px;
+	bottom: 0px;
+}
+
+.numjobs {
+	margin-top: 30px !important;
+	margin: 0 0 0 30px;
+	float: left;
+	margin-bottom: 50px;
+}
+.numjobs > .column {
+   float: left;
+   width: 30%;
+   padding: 10px;
+   display: block;
+   text-align: center;
+}
+.numjobs > .column >.h1 {
+	font-size: 15px;
+	float: left;
+}
+.numjobs > .column >.h2 {
+   font-size: 25px;
+   line-height: 35px;
+   float: left;
+   text-align: left;
+   width: 234px;
+}
+.numjobs > .column > .number {
+	border-top: 10px solid var(--emphasiscolor);
+	padding: 35px;
+	display: block;
+	font-size: 35px;
+	text-align: center;
+	font-weight: bolder;
+}
+.numjobs > .column > .text {
+	font-size: 15px;
+	text-align: center;
+}
+.numjob:after {
+  content: "";
+  display: table;
+  clear: both;
 }

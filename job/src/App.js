@@ -1,23 +1,55 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import './App.css';
 
-function App() {
-  const [message, setMessage] = useState('');
-
-  useEffect(() => {
-    fetch('http://localhost:5000/')
-      .then(response => response.text())
-      .then(data => setMessage(data));
-  }, []);
-
+function Job() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <h1>{message}</h1>
-      </header>
-    </div>
+    // Add react fragment to wrap all root elements 
+    <section>
+      <section className="pagetop">
+        <section className="inner clear"></section>
+        <section className="aboutcom clear"></section>
+        <img src={"/hr.png"} />
+
+      </section>
+
+      <section className="newjobpost">
+        <div className="inner"></div>
+        
+        <h1 className="h1">
+          62.000 Bewerber suchen nach Arbeit
+        </h1>
+        
+        <h2 className="h2">
+          Ein internationales Netzwerk erfahrener Sourcing-Partner nutzt TalentSure, um qualifizierten Fachkräften ihren Traum zu erfüllen.
+        </h2>
+        
+        <button 
+          className="bigbutton right"
+          onClick={() => console.log("Post your Job clicked")}
+        >
+          Post your Jobs
+        </button>
+      </section>
+      <section className="numjobs">
+    
+        <div className="column">
+          <span className="h1">Our Impact</span><br />
+          <span className="h2">Jeden Tag neue Bewerber und Stellen</span>
+        </div>
+        <div className="column">
+          <span className="number">1.885</span>
+          <span className="text">STELLEN</span>
+        </div>
+        <div className="column">
+          <span className="number">62.817</span>
+          <span className="text">BEWERBER</span>
+        </div>
+    
+      </section>
+    </section>
   );
 }
 
-export default App;
+export default Job;
+
 
