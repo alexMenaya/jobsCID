@@ -3,7 +3,7 @@ import './App.css';
 
 function Job() {
   return (
-    // Add react fragment to wrap all root elements 
+
     <section>
       <section className="pagetop">
         <section className="inner clear"></section>
