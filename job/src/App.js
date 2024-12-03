@@ -2,6 +2,16 @@ import React from 'react';
 import './App.css';
 
 function Job() {
+  const [jobs, setJobs] = useState([]);
+
+  useEffect(() => {
+
+      // get jobs from the backend
+      fetch('http://localhost:3000/api/jobs')
+          .then((res) => res.json())
+          .then((data) => setJobs(data))
+  }, []);
+
   return (
 
     <section>
@@ -20,17 +30,18 @@ function Job() {
         </h1>
         
         <h2 className="h2">
-          Ein internationales Netzwerk erfahrener Sourcing-Partner nutzt TalentSure,<br/>
+          Ein internationales Netzwerk erfahrener Sourcing-Partner nutzt TalentSure,<br/> 
            um qualifizierten Fachkräften ihren Traum zu erfüllen.
         </h2>
         
         <button 
           className="bigbutton right"
-          onClick={() => console.log("Post your Job clicked")}
+          onClick={('')}
         >
-          Post your Jobs
+          Post your Jobs 
         </button>
       </section>
+
       <section className="numjobs">
     
         <div className="column">
@@ -47,10 +58,9 @@ function Job() {
         </div>
     
       </section>
+
     </section>
   );
 }
-
 export default Job;
-
 

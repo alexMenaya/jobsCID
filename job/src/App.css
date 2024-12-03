@@ -1,17 +1,17 @@
 
-.pagetop {
+.section.pagetop {
 	display: flex;
 	justify-content: center; 
 	align-items: center; 
 	background-size: contain;
 	background-repeat: no-repeat;
 	background-position: center center;
-	background-color: #f2f2f2;
-  }
+	background-color:#f2f2f2 !important;
+}
 
 
-.pagetop img{
-   width: 1000px;
+.section.pagetop img{
+   width: 5000px;
    max-width:100%;
    height:auto; 
 }
