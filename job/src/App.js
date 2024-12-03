@@ -8,7 +8,7 @@ function Job() {
       <section className="pagetop">
         <section className="inner clear"></section>
         <section className="aboutcom clear"></section>
-        <img src={"/hr.png"} />
+        <img src={"/hr.png"}/>
 
       </section>
 
@@ -20,7 +20,8 @@ function Job() {
         </h1>
         
         <h2 className="h2">
-          Ein internationales Netzwerk erfahrener Sourcing-Partner nutzt TalentSure, um qualifizierten Fachkräften ihren Traum zu erfüllen.
+          Ein internationales Netzwerk erfahrener Sourcing-Partner nutzt TalentSure,<br/>
+           um qualifizierten Fachkräften ihren Traum zu erfüllen.
         </h2>
         
         <button 

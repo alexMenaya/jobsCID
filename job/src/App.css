@@ -1,19 +1,23 @@
 
-.pagetop{
+.pagetop {
+	display: flex;
+	justify-content: center; 
+	align-items: center; 
 	background-size: contain;
-  background-repeat: no-repeat;
+	background-repeat: no-repeat;
 	background-position: center center;
-}
+	background-color: #f2f2f2;
+  }
+
 
 .pagetop img{
-	 width: 1000px;
+   width: 1000px;
    max-width:100%;
-   height:auto;
-   position: relative;
+   height:auto; 
 }
 
 .newjobpost {
-  border-radius: 15px;
+    border-radius: 15px;
 	background-color: var(--backgroundcolor);
 	width: 600px;
 	height: 140px;
@@ -22,38 +26,42 @@
 	float: left;
 	margin-bottom: 50px;
 }
+
+.newjobpost button{
+	background-color:orange;
+	position: absolute;
+	left: 200px;
+	top: 680px;
+	color: white;
+	border: none;
+	padding: 10px 20px;
+	font-size: 14px;
+	border-radius: 5px;
+}
+
 .newjobpost > .inner {
 	width: calc(100% - 20px);
 	margin: 10px;
 	height: calc(100% - 20px);
 }
 
-.newjobpost > .inner > .h1 {
-  position: absolute;
-	top: 0px;
-	left: 5px;
-	font-size: 20px;
-/*	font-weight: bold;*/
+.newjobpost h1 {
+    position: absolute;
+	top: 540px;
+	left: 50px;
+	font-size: 16px;
+    font-weight: bold;
 	line-height: 40px;
 	vertical-align: top;
 	height: 40px;
 }
 
-.newjobpost > .inner > .h2 {
-  font-size: 15px;
+.newjobpost h2 {
+    font-size: 12px;
 	line-height: 14px;
-	height: 45px;
-	width: 100%;
 	position: absolute;
-	top: 35px;
-	left: 5px;
-}
-
-.newjobpost > .inner > .button{
-  background-color: yellowgreen;
-  position: absolute;
-	right: 5px;
-	bottom: 0px;
+	top: 600px;
+	left: 50px;
 }
 
 .numjobs {
