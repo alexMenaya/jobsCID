@@ -10,11 +10,13 @@ app.use(cors());
 
 app.use(express.static(path.resolve(__dirname, 'job/build')));
 
+
 // API route
 app.get('/api/jobs', (req, res) => {
   res.json([
     { id: 1, title: 'Software Developer', location: 'Berlin' },
     { id: 2, title: 'Project Manager', location: 'Munich' },
+    { id: 3, title: 'Truck Developer', location: 'Kiel' }
   ]);
 });
 

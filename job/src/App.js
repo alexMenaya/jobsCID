@@ -7,9 +7,9 @@ function Job() {
   useEffect(() => {
 
       // get jobs from the backend
-      fetch('/api/jobs')
+      fetch('http://localhost:5000/api/jobs')
           .then((res) => res.json())
-          .then((data) => setJobs(data))
+          .then((jobs) => setJobs(jobs))
   }, []);
 
   return (
@@ -18,7 +18,7 @@ function Job() {
 
       <section className="pagetop">
         <div className="inner clear"></div>
-        <img src={"/hr.png"}/>
+        <img src={"/hr.png"} alt = "error"/>
 
       </section>
 
@@ -38,7 +38,7 @@ function Job() {
           className="bigbutton right"
           onClick={('')}
         >
-          Post your Jobs TalentSure
+          Post your Jobs 
         </button>
       </section>
 
@@ -59,6 +59,21 @@ function Job() {
     
       </section>
 
+       {/* Job List Section */}
+       <section className="joblist">
+        <h2 className="h2">Available Jobs</h2>
+        {jobs.length > 0 ? (
+          <ul>
+            {jobs.map((job) => (
+              <li key={job.id}>
+                <h3>{job.title}</h3>
+                <p>{job.location}</p>
+              </li>
+            ))}
+          </ul>
+        ) : ( <p>No jobs available</p>
+        )}
+      </section>
     </section>
   );
 }
