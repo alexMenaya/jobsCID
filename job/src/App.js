@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState,useEffect} from 'react';
 import './App.css';
 
 function Job() {
@@ -7,7 +7,7 @@ function Job() {
   useEffect(() => {
 
       // get jobs from the backend
-      fetch('http://localhost:3000/api/jobs')
+      fetch('/api/jobs')
           .then((res) => res.json())
           .then((data) => setJobs(data))
   }, []);
@@ -15,9 +15,9 @@ function Job() {
   return (
 
     <section>
+
       <section className="pagetop">
-        <section className="inner clear"></section>
-        <section className="aboutcom clear"></section>
+        <div className="inner clear"></div>
         <img src={"/hr.png"}/>
 
       </section>
@@ -38,7 +38,7 @@ function Job() {
           className="bigbutton right"
           onClick={('')}
         >
-          Post your Jobs 
+          Post your Jobs TalentSure
         </button>
       </section>
 
